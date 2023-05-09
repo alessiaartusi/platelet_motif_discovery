@@ -21,7 +21,6 @@ OUT_PATH <- "C:/Users/aless/Desktop/script/output/preprocessing/"
 # PLATELETS Data Pre Processing
 
 ## Retrieve Data
-
 ### Download data from recount3; the object contains raw counts data and metadata about the samples and the genes.
 
 options(recount3_url = "https://recount-opendata.s3.amazonaws.com/recount3/release")
