@@ -35,7 +35,6 @@ tissues <- tissues[which(rownames(tissues) %in% rownames(platelets)), ]
 merged <- cbind(platelets, tissues)
 
 
-
 # Load the tissues attributes
 sample_attributes <- read.table(paste(OUT_PATH, "preprocessing/tissues_sample_attributes.txt", sep = ""))
 sample_attributes <- sample_attributes[which(sample_attributes$SAMPID %in% colnames(merged)),]
@@ -140,7 +139,7 @@ dim(RP.genes$Table1)[1]
 print("genes over expressed in platelets vs other")
 head(RP.genes$Table2)
 print("total:")
-dim(RP.genes$Table2)[1] # 12869
+dim(RP.genes$Table2)[1]
 
 # Write the over-expressed genes into a file
 write.table(RP.genes$Table2, paste(OUT_PATH, "rankprod/genes_up.txt", sep = ""), sep = "\t")
