@@ -113,11 +113,11 @@ RP.genes <- topGene(RP.out,
 
 # genes over expressed in mk vs platelets
 head(RP.genes$Table1)
-dim(RP.genes$Table1)[1] # 1171
+dim(RP.genes$Table1)[1]
 
 # genes over expressed in platelets vs mk
 head(RP.genes$Table2)
-dim(RP.genes$Table2)[1] # 1080
+dim(RP.genes$Table2)[1]
 
 # Write the over-expressed genes into a file
 write.table(RP.genes$Table2, paste(OUT_PATH, "rankprod/genes_up_mk.txt", sep = ""), sep = "\t")
