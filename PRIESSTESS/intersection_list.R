@@ -14,7 +14,7 @@ wb <- read.csv(file = paste(OUT_PATH, "rankprod/gene_list_logFCthresh_wb.csv", s
 int_2 <- mep$x[mep$x %in% wb$x]
 # the intersection is made of 457 genes
 
-# Intersect the intersections
+# (TISSUES and MEP CD34+) and (MEP CD34+ and WHOLE BLOOD)
 INT <- int[int %in% int_2]
 # 222 genes intersected from tissues, MEP CD34+ and whole blood analyses
 write.table(INT, paste(OUT_PATH, "intersected_gene_list.csv", sep = ""), row.names = FALSE)
