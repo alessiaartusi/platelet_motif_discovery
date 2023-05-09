@@ -79,12 +79,6 @@ def priesstessPipeline(fasta):
     cmd = PRIESSTESScmd(foregroundFasta,backgroundFasta)
     return(cmd)
 
-PRIESSTESS -fg alignedReads/utr_list_logFCthresh/SRR1982704PRIESSTESS.fa -bg alignedReads/utr_list_logFCthresh/SRR1982704.random.PRIESSTESS.fa -minw 4 -maxw 9 -o PRIESSTESS_pipeline/SRR1982704PRIESSTESS
-
-Subprocess finished
-PRIESSTESS Done: SRR1982704PRIESSTESS
-
-
 fastas = glob.glob("alignedReads/utr*/*[0-9].fa"); len(fastas); fasta = fastas[0]
 with Pool(processes=4) as pool:
     cmds = pool.starmap(priesstessPipeline, zip(fastas))
